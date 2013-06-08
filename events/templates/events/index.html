@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block container %}
+<div class="hero-unit">
+    <h2>Eventos
+    <small>
+    {% if search %}
+        pesquisa com a palavra: "{{ search }}"
+    {% else %}
+        Listagem de Eventos
+    {% endif%}
+    </small></h2>
+</div>
+{% for ev in events %}
+    <div>
+        <h2><a href="{% url events_details ev.pk %}">{{ ev }}</a></h2>
+        <p>{{ ev.description|truncatewords:"20"  }}</p>
+    </div>
+{% empty %}
+<div class="alert alert-info">
+            <p>Nenhum evento foi encontrado</p>
+          </div>
+{% endfor %}
+{% endblock %}
