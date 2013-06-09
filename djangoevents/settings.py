@@ -154,3 +154,15 @@ LOGGING = {
         },
     }
 }
+
+#Apenas para teste
+#EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+#Envio de emails utilizando SMTP
+
+DEFAULT_FROM_EMAIL  = 'Frederico da Silva Santos <fredsilva.sistemas@gmail.com>'
+EMAIL_USE_TLS       = True
+EMAIL_HOST          = 'smtp.gmail.com'
+EMAIL_HOST_USER     = 'fredsilva.sistemas@gmail.com'
+EMAIL_HOST_PASSWORD = 'if(login==true)'
+EMAIL_PORT          = 587

@@ -13,7 +13,8 @@ def contact(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
-            pass
+            form.send_mail()
+            context['sucess'] = True
             #context['data'] = form.cleaned_data
     else:
         form = ContactForm()

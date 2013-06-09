@@ -36,20 +36,7 @@
             <ul class="nav">
               <li class="active"><a href="{% url home %}">Início</a></li>
               <li><a href="{% url events %}">Eventos</a></li>
-              <li><a href="#about">About</a></li>
               <li><a href="{% url contact %}">Contato</a></li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ nome }} <b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Action</a></li>
-                  <li><a href="#">Another action</a></li>
-                  <li><a href="#">Something else here</a></li>
-                  <li class="divider"></li>
-                  <li class="nav-header">Nav header</li>
-                  <li><a href="#">Separated link</a></li>
-                  <li><a href="#">One more separated link</a></li>
-                </ul>
-              </li>
             </ul>
             <form class="navbar-search pull-left" action="{% url events %}" method="get">
               <input class="search-query span2" type="text" placeholder="Pesquisar..." name=search>
